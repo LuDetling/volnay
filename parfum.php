@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="produits.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/produits.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Document</title>
@@ -34,11 +34,11 @@
 
                     echo '
                 <img src="' . $urlimage . '" alt="">
-                <div class="description">
+                <div class="leProduit">
                     <div class="nom_prix_ajout">
                         <div>
                             <h3>' . $nom . '</h3>
-                            <p>' . $prix . '</p>
+                            <p>' . $prix . ' €</p>
                         </div>
                         <a href="" class="ajouter_pannier">Ajouter au pannier</a>
                     </div>
@@ -50,7 +50,6 @@
                         <p class="sensation">Les sensations</p>
                         <hr>
                         <p class="afficherSensation">' . $sensation . '</p>
-                        <p>Les notes</p>
                     </div>
                 </div>';
                 }
@@ -61,5 +60,5 @@
         </article>
     </section>
 </body>
-
+<script src="js/view/parfum.js"></script>
 </html>

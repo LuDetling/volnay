@@ -1,16 +1,22 @@
 .image_description {
     display: flex;
-    justify-content: space-around;
-    width: 70%;
-    margin: auto;
+    width: 100%;
     font-size: 1.5em;
     margin-top: 70px;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
 .image_description img {
     border: solid black 1px;
     height: 450px;
     width: 370px;
+    object-fit: contain;
+}
+
+.leProduit {
+    width: 50%;
+    margin: 40px 0;
 }
 
 .nom_prix_ajout {
@@ -44,10 +50,24 @@
     float: right;
 } */
 
+.description {
+    cursor: pointer;
+}
+
 .afficherDescription {
     display: none;
 }
 
+.sensation {
+    cursor: pointer;
+}
+
 .afficherSensation {
     display: none;
+}
+
+hr {
+    width: 40%;
+    text-align: start;
+    margin: 0;
 }
