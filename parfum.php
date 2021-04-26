@@ -19,8 +19,13 @@
         <article class="image_description">
             <?php
 
-            $bdd = new PDO("mysql:host=localhost;dbname=volnay;charset=utf8", "root", "root");
-            $reponse = $bdd->query("SELECT * FROM parfums");
+            try {
+                $bdd = new PDO("mysql:host=localhost;dbname=volnay;charset=utf8", "root", "root");
+                $reponse = $bdd->query("SELECT * FROM parfums");
+            } catch (PDOException $e) {
+                print "Erreur !: " . $e->getMessage() . "<br/>";
+                die();
+            }
 
             while ($donnees = $reponse->fetch()) {
                 if ($_GET["id"] === $donnees["id"]) {
@@ -61,4 +66,5 @@
     </section>
 </body>
 <script src="js/view/parfum.js"></script>
+
 </html>
